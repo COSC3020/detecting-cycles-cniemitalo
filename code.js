@@ -10,6 +10,11 @@ function hasCycle(graph) {
 }
 
 function cycleExists(graph, current, visited) {
+    //check if current is out of bounds or undefined 
+    if (current < 0 || current >= graph.length || !graph[current]) {
+        return false; 
+    }
+    
     //if we've already visited the node, return true 
     if (visited.includes(current)) {
         return true; 
